@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var saludo_1 = require("./saludo");
+var playlist_1 = require("./playlist");
+var fs = require("fs");
+var mus = fs.readFileSync('musica.txt', 'utf8');
+var canc = mus.split(',');
+var hola = new saludo_1.saludo();
+hola.saludar();
+var rep = new playlist_1.playlist();
+console.log(rep.getCancionActual());
+rep.cambiarCancion(canc);
