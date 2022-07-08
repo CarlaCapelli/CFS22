@@ -1,0 +1,10 @@
+import {saludo} from "./saludo";
+import { playlist } from "./playlist";
+import * as fs from 'fs';
+let mus: string = fs.readFileSync('musica.txt', 'utf8');
+let canc: string[] = mus.split(',');
+let hola= new saludo();
+hola.saludar();
+let rep=new playlist();
+console.log(rep.getCancionActual());
+rep.cambiarCancion(canc);
