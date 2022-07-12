@@ -1,0 +1,15 @@
+"use strict";
+exports.__esModule = true;
+var telefonoConRadio_1 = require("./telefonoConRadio");
+//import { Telefono } from "./telefono";
+var telefonoConCamara_1 = require("./telefonoConCamara");
+var telCamara = new telefonoConCamara_1.TelefonoConCamara(78);
+telCamara.prender();
+telCamara.mandarMensaje();
+telCamara.prenderCamara();
+telCamara.sacarFotos();
+var telefonoCRadio = new telefonoConRadio_1.TelefonoConRadio(41);
+telefonoCRadio.prender();
+telefonoCRadio.hacerLlamada();
+telefonoCRadio.setFrecuencia(34);
+console.log("la frecuencia de radio es " + telefonoCRadio.getFrecuencia());
