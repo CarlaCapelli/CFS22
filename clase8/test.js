@@ -1,0 +1,17 @@
+"use strict";
+exports.__esModule = true;
+var futbolista_1 = require("./futbolista");
+var entrenador_1 = require("./entrenador");
+var masajista_1 = require("./masajista");
+var futbolista1 = new futbolista_1.Futbolista("carla", "river", 28, 4, 220000, "delantero", "derecho", 9, 23);
+futbolista1.concentrarse();
+console.log(futbolista1.getPieHabil());
+futbolista1.hablar();
+var futbolista2 = new futbolista_1.Futbolista("pedro", "river", 22, 4, 223000, "defensa", "zurdo", 3, 2);
+var entrenador1 = new entrenador_1.Entrenador("juan", "river", 44, 3, 122000);
+entrenador1.agregarFutbolista(futbolista1);
+entrenador1.entrenar();
+entrenador1.elegirTitular("carla", "titular");
+var masajista = new masajista_1.Masajista("maria", "river", 32, 15, 100000);
+masajista.agregarCliente(futbolista2);
+masajista.rehabilitar("pedro");
