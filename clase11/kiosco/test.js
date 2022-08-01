@@ -1,0 +1,14 @@
+"use strict";
+exports.__esModule = true;
+var kiosco_1 = require("./kiosco");
+var efectivo_1 = require("./efectivo");
+var tarjeta_1 = require("./tarjeta");
+var kiosco = new kiosco_1.Kiosco("carla");
+kiosco.cargarProductos();
+kiosco.agregarPruducto("lapiz", 3.12, 5);
+kiosco.compra("caramelo", 23);
+var tarjeta = new tarjeta_1.Tarjeta;
+kiosco.pago(tarjeta);
+kiosco.compra("alfajor", 2);
+var efectivo = new efectivo_1.Efectivo;
+kiosco.pago(efectivo);
