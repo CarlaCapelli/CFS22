@@ -19,7 +19,7 @@ console.log(reproductor.getCancionActual());
 reproductor.cancionAnterior();
 console.log(reproductor.getCancionActual());
 console.log(reproductor.getCantidadPistas());
-var repr2 = new reproductor2_1.Reproductor2;
+var repr2 = new reproductor2_1.Reproductor2();
 repr2.prender();
 repr2.abrirApp();
 repr2.cancionAnterior();

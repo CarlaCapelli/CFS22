@@ -4,7 +4,10 @@ exports.Reproductor2 = void 0;
 var audio_1 = require("./audio");
 var Reproductor2 = /** @class */ (function () {
     function Reproductor2() {
-        this.canciones = [new audio_1.Audio(1, "I Aint worried", 2.28, "OneRepublic"), new audio_1.Audio(2, "Shivers", 3.27, "Ed Sheeran")];
+        this.canciones = [
+            new audio_1.Audio(1, "I Aint worried", 2.28, "OneRepublic"),
+            new audio_1.Audio(2, "Shivers", 3.27, "Ed Sheeran"),
+        ];
         this.prendido = false;
         this.appAbierta = false;
         this.cancionActual = this.canciones[0];
@@ -35,42 +38,32 @@ var Reproductor2 = /** @class */ (function () {
         }
     };
     Reproductor2.prototype.cancionSiguiente = function () {
-        var _this = this;
         var cancion = this.cancionActual;
         if (this.appAbierta === true) {
-            this.canciones.forEach(function (element) {
-                if (element === cancion) {
-                    var indice = _this.canciones.indexOf(element);
-                    if (indice >= _this.canciones.length - 1) {
-                        indice = 0;
-                    }
-                    else {
-                        indice++;
-                    }
-                    _this.cancionActual = _this.canciones[indice];
-                }
-            });
+            var indice = this.canciones.indexOf(cancion);
+            if (indice >= this.canciones.length - 1) {
+                indice = 0;
+            }
+            else {
+                indice++;
+            }
+            this.cancionActual = this.canciones[indice];
         }
         else {
             console.log("La app no esta abierta");
         }
     };
     Reproductor2.prototype.cancionAnterior = function () {
-        var _this = this;
         var cancion = this.cancionActual;
         if (this.appAbierta === true) {
-            this.canciones.forEach(function (element) {
-                if (element === cancion) {
-                    var indice = _this.canciones.indexOf(element);
-                    if (indice <= 0) {
-                        indice = _this.canciones.length - 1;
-                    }
-                    else {
-                        indice--;
-                    }
-                    _this.cancionActual = _this.canciones[indice];
-                }
-            });
+            var indice = this.canciones.indexOf(cancion);
+            if (indice <= 0) {
+                indice = this.canciones.length - 1;
+            }
+            else {
+                indice--;
+            }
+            this.cancionActual = this.canciones[indice];
         }
         else {
             console.log("La app no esta abierta");
