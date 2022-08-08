@@ -23,7 +23,7 @@ reproductor.cancionAnterior();
 console.log(reproductor.getCancionActual());
 console.log(reproductor.getCantidadPistas());
 
-let repr2 = new Reproductor2;
+let repr2 = new Reproductor2();
 repr2.prender();
 repr2.abrirApp();
 repr2.cancionAnterior();

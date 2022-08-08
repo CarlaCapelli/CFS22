@@ -19,9 +19,11 @@ exports.Alumno = void 0;
 var persona_1 = require("./persona");
 var Alumno = /** @class */ (function (_super) {
     __extends(Alumno, _super);
-    function Alumno(nombre, documento, edad) {
+    function Alumno(nombre, documento, edad, grado) {
         var _this = _super.call(this, nombre, documento, edad) || this;
         _this.examenes = [];
+        _this.grado = grado;
+        _this.promedio = 0;
         return _this;
     }
     Alumno.prototype.agregarExamen = function (examen) {
