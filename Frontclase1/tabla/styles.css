@@ -1,0 +1,17 @@
+
+h1{
+    font-size: 50px;
+    text-align: center;
+}
+table{
+    margin:auto;
+    border:solid 1px black ;
+}
+th{
+    border:solid 1px black;
+    font-size: 40px;
+}
+td{
+    font-size: 30px;
+   border: solid 1px black; 
+}
