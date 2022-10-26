@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="color">
+      <input
+        type="text"
+        v-on:input="colorIngresado= $event.target.value"
+        placeholder="rojo/azul/amarillo"
+      />
+      <input
+        type="text"
+        v-on:input="nombreIngresado= $event.target.value"
+        placeholder="nombre"
+      />
+      <h1 v-bind:class="colorIngresado">{{nombreIngresado}}</h1>
+    </div>
+
+    <div id="Mostrar">
+      <button v-on:click="cambiar">Mostrar</button>
+      <h1 v-if="show ">Carla Capelli</h1>
+      <h1 v-else>Capelli Carla</h1>
+    </div>
+
+    <div id="personas">
+      <ul>
+        <li v-for="persona in personas">
+          {{persona.nombre +" " + persona.edad}}
+        </li>
+      </ul>
+    </div>
+
+    <div id="personitas">
+      <personitas-tarjeta> </personitas-tarjeta>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
